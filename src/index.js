@@ -6,7 +6,7 @@ const express    = require('express'),
 const https = require('node:https')
 const { JSDOM } = require('jsdom')
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 const app = express()
 
