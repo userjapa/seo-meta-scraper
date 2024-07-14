@@ -37,7 +37,7 @@ function scrap(url) {
         const { window } = new JSDOM(chunk.join(''))
   
         resolve({
-          charset: window.document.querySelector('meta[charset]')?.getAttribute('charset') || '',
+          charset: window.document.querySelector('meta[charset]')?.getAttribute('charset').toUpperCase() || '',
           viewport: window.document.querySelector('meta[name="viewport"]')?.content || '',
           title: window.document.querySelector('title')?.textContent || '',
           description: window.document.querySelector('meta[name="description"]')?.content || '',
