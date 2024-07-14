@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src",
+    "start": "node --env-file=.env.production ./src",
     "dev": "node --watch ./src"
   },
   "author": "",
